@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <div id="inputs" style="display: flex; justify-content: center;">
+     <input type="text" placeholder="Title" id="input1">
+    <input type="text" placeholder="Description" id="input2">
+    <select  id="need">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+            <button onclick="addTodo()">Add todo</button>
+        </div>
+            <div id="head" style="display: flex; justify-content: space-around;">
+        <div style="font-size: 20px; font-weight: bold;">Todos</div>
+        <div style="font-size: 20px; font-weight: bold;">In progress</div>
+        <div style="font-size: 20px; font-weight: bold;">Under Checking</div>
+        <div style="font-size: 20px; font-weight: bold;">Completed</div>
+    </div>
+
+   
+    <div style="display: flex; justify-content: space-around;">
+        <div id="droppableSpace1">
+        </div>
+        <div id="droppableSpace2">
+        </div>
+        <div id="droppableSpace3">
+        </div>
+        <div id="droppableSpace4">
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>

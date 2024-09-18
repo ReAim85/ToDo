@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #draggableElement {
+  cursor: move;
+}
+
+#droppableArea {
+  border: 2px dashed #ccc;
+}
+</style>
+<body>
+    <div id="draggableElement" draggable="true">Drag Me</div>
+<div id="droppableArea">Drop Here</div>
+</body>
+<script>
+    // Get references to the draggable element and the droppable area
+const draggableElement = document.getElementById('draggableElement');
+const droppableArea = document.getElementById('droppableArea');
+
+// Event handler for when dragging starts
+draggableElement.addEventListener('dragstart', (event) => {
+  // Set the data to be transferred during the drag operation
+  event.dataTransfer.setData('text/plain', event.target.id);
+});
+
+// Event handler for when dropping occurs
+droppableArea.addEventListener('drop', (event) => {
+  // Prevent the default behavior to allow dropping
+  event.preventDefault();
+  
+  // Retrieve the data that was set during the drag operation
+  const data = event.dataTransfer.getData('text/plain');
+  
+  // Find the draggable element based on the data
+  const draggableElement = document.getElementById(data);
+  
+  // Append the draggable element to the droppable area
+  event.target.appendChild(draggableElement);
+});
+
+// Event handler for when a draggable element is being dragged over the droppable area
+droppableArea.addEventListener('dragover', (event) => {
+  // Prevent the default behavior to allow dropping
+  event.preventDefault();
+});
+</script>
+</html>

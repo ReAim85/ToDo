@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'vscodefont';
+    src: url('fonts/segoe/segoe_ui-webfont.woff') format('woff'),
+         url('fonts/segoe/segoe_ui-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-family: "vscodefont", serif;
+    background-color: #ffffff;
+}
+
+#difficulty {
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: white;
+    font-size: 13px;
+}
+
+#difficulty option[value='medium'] {
+    background-color: green;
+}
+
+#inputs {
+    margin: 20px 0px 40px 0px;
+    position: sticky;
+    top: 0;
+}
+
+#inputs select {
+    padding: 1px;
+}
+
+#input1, #input2 {
+    padding: 6px 7px;
+    margin: 0 10px;
+    font-size: 15px;
+    border-radius: 5px;
+} 
+
+#droppableSpace2 div, #droppableSpace3 div, #droppableSpace4 div, #droppableSpace1 div {
+    border: 0.5px solid #e5eaf1;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    cursor: move;
+    padding: 10px 10px;
+}
+
+#droppableSpace2, #droppableSpace3, #droppableSpace4, #droppableSpace1 {
+    /* border: 2px dashed #ccc; */
+    height: 50vh, max-content;
+    width: 20vw;
+    word-wrap: break-word;
+    margin-top: 10px;
+    /* border: 1px solid rgb(0, 0, 0); */
+    border-radius: 10px;
+  }
+
+  #droppableSpace2 div p, #droppableSpace3 div p, #droppableSpace4 div p, #droppableSpace1 div p {
+    margin-top: -15px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #4a606f;
+  }
+
+  #droppableSpace2 div h3, #droppableSpace3 div h3, #droppableSpace4 div h3, #droppableSpace1 div h3 {
+    font-size: 18px;
+  }
+
+  .easy {
+    background-color: green;
+    color: white;
+}
+
+.medium {
+    background-color: yellow;
+    color: black;
+}
+
+.hard {
+    background-color: red;
+    color: white;
+}
+
+#date {
+    font-size: small;
+    padding-left: 3px;
+    color: #4a606f;
+}
+
+.fa-clock {
+    font-size: 15px;
+    padding-left: 10px;
+    margin: 3px;
+}
+
+.fa-times {
+    font-size: 15px;
+    cursor: pointer;
+    padding: 0px 0px 0px 107px;
+}
